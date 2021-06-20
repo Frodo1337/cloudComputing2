@@ -20,7 +20,7 @@ def page3(request):
         <body>
             <h1>Python no Heroku - SOCPS</h1>
             <h2>Página 3</h2>
-            <a href="../">index</a>
+            <a href="{% url 'index' %}">index</a>
         </body>
     </html>
     '''
