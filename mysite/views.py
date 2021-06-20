@@ -25,3 +25,6 @@ def page3(request):
     </html>
     '''
     return HttpResponse(html)
+
+def page4(request):
+    return render(request, "page4.html")
