@@ -1,16 +1,27 @@
-<html>
-    <ul>
-        <li>
-            Ricardo Naoki Tanji
-        </li>
-        <li>
-            Gustavo Foroutan Raposo
-        </li>
-        <li>
-            Matheus Wilhelm Siqueira
-        </li>
-        <li>
-            João Felipe Schwab Teixera dos Santos
-        </li>
-    </ul>
-</html>
+{% block content %}
+
+<h2>
+    Integrantes
+</h2>
+
+<ul>
+    <li>
+        Ricardo Naoki Tanji
+    </li>
+    <li>
+        Gustavo Foroutan Raposo
+    </li>
+    <li>
+        Matheus Wilhelm Siqueira
+    </li>
+    <li>
+        João Felipe Schwab Teixera dos Santos
+    </li>
+</ul>
+
+<br/>
+<a href="{% url 'page5' %}">page 5</a>
+<br/>
+<a href="{% url 'page3' %}">page 3</a>
+
+{% endblock %}
