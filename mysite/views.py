@@ -14,11 +14,21 @@ def page2(request):
     return render(request, "page2.html")
 
 def page3(request):
-    return HttpResponse(request, "page3.html")
+    html = '''
+    <html>
+        <head><title>Página 3</title></head>
+        <body>
+            <h1>Python no Heroku - SOCPS</h1>
+            <h2>Página 3</h2>
+            <a href="../">index</a>
+        </body>
+    </html>
+    '''
+    return HttpResponse(html)
 
 def page4(request):
     return render(request, "page4.html")
 
 def page5(request):
     horario = str(datetime.now().strftime("%x %X"))
-    return HttpResponse(request, "page5.html", {"horario": horario})
+    return render(request, "page5.html", {"horario": horario})
