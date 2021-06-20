@@ -1,3 +1,4 @@
+from datetime import date, datetime
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -28,3 +29,15 @@ def page3(request):
 
 def page4(request):
     return render(request, "page4.html")
+
+def page5(request):
+    html = f'''
+    <html>
+        <head><title>Página 5</title></head>
+        <body>
+            <h2>{str(datetime.now().strftime("%x %X"))}</h2>
+            <a href="../">index</a>
+        </body>
+    </html>
+    '''
+    return HttpResponse(html)
